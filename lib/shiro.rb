@@ -1,11 +1,11 @@
 require "net/http"
 require "json"
 require "uri"
-require "shiro_ruby/client"
-require "shiro_ruby/deployment"
-require "shiro_ruby/version"
+require "shiro/client"
+require "shiro/deployment"
+require "shiro/version"
 
-module ShiroRuby
+module Shiro
   @config = {api_key: nil}
 
   class << self

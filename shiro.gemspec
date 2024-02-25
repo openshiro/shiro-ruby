@@ -1,15 +1,15 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "shiro_ruby/version"
+require "shiro/version"
 
 Gem::Specification.new do |gem|
-  gem.name = "shiro_ruby"
-  gem.version = ShiroRuby::VERSION
+  gem.name = "shiro"
+  gem.version = Shiro::VERSION
   gem.authors = ["Duncan Miller"]
   gem.email = ["ruby@openshiro.com"]
   gem.description = "Wrapper for the Shiro API"
   gem.summary = "A system for consuming the Shiro API"
-  gem.homepage = "https://github.com/OpenShiro/shiro_ruby"
+  gem.homepage = "https://github.com/OpenShiro/shiro-ruby"
 
   # Runtime dependencies
   gem.add_dependency "httparty", ">= 0.17.3"

@@ -1,6 +1,6 @@
 require "httparty"
 
-module ShiroRuby
+module Shiro
   class Client
     include HTTParty
     base_uri "https://openshiro.com/api/v1"

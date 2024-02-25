@@ -2,26 +2,26 @@ This is the official [Shiro API](https://openshiro.com/api/v1/docs) Ruby gem mai
 
 To use the gem, include it in your Rails gemfile with:
 
-`bundle add shiro_ruby`
+`bundle add shiro`
 
 or directly in the gemfile:
 
-`gem "shiro_ruby", "~> 0.1"`
+`gem "shiro", "~> 0.1"`
 
 Example usage:
 
 ````
-require 'shiro_ruby'
+require 'shiro'
 
-ShiroRuby.configure do |config|
+Shiro.configure do |config|
   config[:api_key] = 'your_api_key...'
 end
 
 # List deployments
-deployments = ShiroRuby::Deployment.list
+deployments = Shiro::Deployment.list
 puts deployments.body
 
 # Retrieve single deployment
-deployment = ShiroRuby::Deployment.retrieve('dpmt_lWokJnPAwQCeV2ZWovjG7BNr')
+deployment = Shiro::Deployment.retrieve('dpmt_lWokJnPAwQCeV2ZWovjG7BNr')
 puts deployment.body
 ````

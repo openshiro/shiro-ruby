@@ -1,4 +1,4 @@
-module ShiroRuby
+module Shiro
   class Deployment
     def self.list
       client.get("/deployments").parsed_response
