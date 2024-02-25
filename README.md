@@ -6,7 +6,7 @@ To use the gem, include it in your Rails gemfile with:
 
 or directly in the gemfile:
 
-`gem "shiro", "~> 0.1"`
+`gem "shiro", "~> 0.1.1"`
 
 Example usage:
 
