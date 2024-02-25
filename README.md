@@ -11,10 +11,10 @@ or directly in the gemfile:
 Example usage:
 
 ````
-require 'shiro'
+require "shiro"
 
 Shiro.configure do |config|
-  config[:api_key] = 'your_api_key...'
+  config[:api_key] = "your_api_key..."
 end
 
 # List deployments
@@ -22,6 +22,6 @@ deployments = Shiro::Deployment.list
 puts deployments.body
 
 # Retrieve single deployment
-deployment = Shiro::Deployment.retrieve('dpmt_lWokJnPAwQCeV2ZWovjG7BNr')
+deployment = Shiro::Deployment.retrieve("dpmt_lWokJnPAwQCeV2ZWovjG7BNr")
 puts deployment.body
 ````
