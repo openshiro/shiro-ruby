@@ -11,15 +11,15 @@ class DeploymentTest < Minitest::Test
   def test_list_deployments
     VCR.use_cassette("deployments_list") do
       response = ShiroRuby::Deployment.list
-
-      assert response.key?("deployments")
-      assert response["deployments"].is_a?(Array)
+      assert response.first.has_key?("id"), "Expected first deployment to have an 'id'"
+      assert response.first.has_key?("name"), "Expected first deployment to have a 'name'"
+      # Add more assertions as needed based on the expected structure of a deployment
     end
   end
 
   def test_retrieve_deployment
     VCR.use_cassette("deployment_retrieve") do
-      deployment_id = "dpmt_lWokJnPAwQCeV2ZWovjG7BNr"
+      deployment_id = ShiroRuby::Deployment.list.first["id"]
       response = ShiroRuby::Deployment.retrieve(deployment_id)
 
       assert_equal deployment_id, response["id"]

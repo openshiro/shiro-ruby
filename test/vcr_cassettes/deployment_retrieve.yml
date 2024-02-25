@@ -58,4 +58,128 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"Not found"}'
   recorded_at: Sun, 25 Feb 2024 07:30:18 GMT
+- request:
+    method: get
+    uri: https://openshiro.com/api/v1/deployments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <SHIRO_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 25 Feb 2024 07:39:32 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1708846772&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=cdr7XBdIFoAGME5VTc3DFKxAU7Nr720WZ%2FcYOtjLQls%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1708846772&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=cdr7XBdIFoAGME5VTc3DFKxAU7Nr720WZ%2FcYOtjLQls%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"df6856bf370905f0b5233c2350b8e440"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 713eeb82-2a79-4d93-b709-ec083cfc0c1c
+      X-Runtime:
+      - '0.026924'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Length:
+      - '296'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":"dpmt_o6drBgMEZv9YmU9vYjb5QwxR","name":"Categorization","environment_type":{"id":"env_ZWaJKVvg9wQEAILwnNqxk0zy","object":"environment_type","name":"PRODUCTION"},"created_at":1707946238,"updated_at":1707946238,"url":"https://openshiro.com/api/v1/deployments/dpmt_o6drBgMEZv9YmU9vYjb5QwxR"}]'
+  recorded_at: Sun, 25 Feb 2024 07:39:32 GMT
+- request:
+    method: get
+    uri: https://openshiro.com/api/v1/deployments/dpmt_o6drBgMEZv9YmU9vYjb5QwxR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <SHIRO_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 25 Feb 2024 07:39:32 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1708846773&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=PwVcjx5PJ06B5oAnJPQ%2BIAinrPu%2B%2B7CBGpoKxrM9Bmc%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1708846773&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=PwVcjx5PJ06B5oAnJPQ%2BIAinrPu%2B%2B7CBGpoKxrM9Bmc%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5d4652949327f6cd4f954400df309967"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb7d1b3e-05fa-4ca2-b7a9-576d410f851e
+      X-Runtime:
+      - '0.021692'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Length:
+      - '294'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":"dpmt_o6drBgMEZv9YmU9vYjb5QwxR","name":"Categorization","environment_type":{"id":"env_ZWaJKVvg9wQEAILwnNqxk0zy","object":"environment_type","name":"PRODUCTION"},"created_at":1707946238,"updated_at":1707946238,"url":"https://openshiro.com/api/v1/deployments/dpmt_o6drBgMEZv9YmU9vYjb5QwxR"}'
+  recorded_at: Sun, 25 Feb 2024 07:39:33 GMT
 recorded_with: VCR 6.2.0
