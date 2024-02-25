@@ -1,24 +1,27 @@
+require "httparty"
+
 module ShiroRuby
   class Client
-    def initialize
-      @api_key = ENV["SHIRO_API_KEY"]
-      unless @api_key
-        raise "no api key defined in environment variables"
-      end
+    include HTTParty
+    base_uri "https://openshiro.com/api/v1"
+
+    def initialize(api_key = ENV["SHIRO_API_KEY"])
+      raise "API key not defined" unless api_key
+      @api_key = api_key
     end
 
-    def parse_url(path)
-      url = URI.parse("https://openshiro.com/api/v1/#{path}")
+    def get(path)
+      self.class.get(path, headers: auth_header)
+    end
 
-      request = Net::HTTP::Get.new(url)
+    def post(path, body = {})
+      self.class.post(path, body: body.to_json, headers: auth_header.merge("Content-Type" => "application/json"))
+    end
 
-      request["Authorization"] = "Bearer #{@api_key}"
+    private
 
-      response = Net::HTTP.start(url.host, url.port, use_ssl: url.scheme == "https") do |http|
-        http.request(request)
-      end
-
-      JSON.parse(response.body)
+    def auth_header
+      {"Authorization" => "Bearer #{@api_key}"}
     end
   end
 end

@@ -17,7 +17,9 @@ Gem::Specification.new do |gem|
   # Development dependencies
   gem.add_development_dependency "minitest", "~> 5.0"
   gem.add_development_dependency "vcr", "~> 6.2"
-  gem.add_development_dependency "standardrb", "~> 1.31.0"
+  gem.add_development_dependency "standardrb"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "webmock", "~> 3.0"
 
   gem.files = `git ls-files`.split($/)
   gem.executables = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
