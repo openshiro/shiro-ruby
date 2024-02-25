@@ -14,7 +14,7 @@ module ShiroRuby
 
       request["Authorization"] = "Bearer #{@api_key}"
 
-      response = Net::HTTP.start(url.host, url.port, use_ssl: url.scheme == 'https') do |http|
+      response = Net::HTTP.start(url.host, url.port, use_ssl: url.scheme == "https") do |http|
         http.request(request)
       end
 
