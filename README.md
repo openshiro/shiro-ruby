@@ -1,6 +1,18 @@
+#Shiro Ruby Library
+
 This is the official [Shiro API](https://openshiro.com/api/v1/docs) Ruby gem maintained by [OpenShiro](https://openshiro.com).
 
-To use the gem, include it in your Rails gemfile with:
+##Documentation
+
+See the [API docs](https://openshiro.com/api/v1/docs) and also this post on [Getting Started with the Shiro API](https://openshiro.com/docs/getting-started-with-the-shiro-api).
+
+##Installation
+
+To install the gem:
+
+`gem install stripe`
+
+Include it in your Rails gemfile with:
 
 `bundle add shiro`
 
@@ -8,7 +20,7 @@ or directly in the gemfile:
 
 `gem "shiro", "~> 0.1.1"`
 
-Example usage:
+##Usage
 
 ````
 require "shiro"
