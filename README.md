@@ -6,7 +6,10 @@ To use the gem, include it in your Rails gemfile with:
 
 or directly in the gemfile:
 
-`shiro_ruby ~> 0.1`
+`gem "shiro_ruby", "~> 0.1"`
+
+Example usage:
+
 ````
 require 'shiro_ruby'
 
