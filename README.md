@@ -1,12 +1,12 @@
-#Shiro Ruby Library
+# Shiro Ruby Library
 
 This is the official [Shiro API](https://openshiro.com/api/v1/docs) Ruby gem maintained by [OpenShiro](https://openshiro.com).
 
-##Documentation
+## Documentation
 
 See the [API docs](https://openshiro.com/api/v1/docs) and also this post on [Getting Started with the Shiro API](https://openshiro.com/docs/getting-started-with-the-shiro-api).
 
-##Installation
+## Installation
 
 To install the gem:
 
@@ -20,7 +20,7 @@ or directly in the gemfile:
 
 `gem "shiro", "~> 0.1.1"`
 
-##Usage
+## Usage
 
 ````
 require "shiro"
