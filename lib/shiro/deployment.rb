@@ -8,10 +8,10 @@ module Shiro
       client.get("/deployments/#{id}").parsed_response
     end
 
-    private_class_method
-
     def self.client
       @client ||= Client.new
     end
+
+    private_class_method :client
   end
 end
