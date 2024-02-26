@@ -5,6 +5,10 @@ require "minitest/autorun"
 require "vcr"
 require "webmock/minitest"
 
+Shiro.configure do |config|
+  config[:api_key] = ENV["SHIRO_API_KEY"]
+end
+
 VCR.configure do |config|
   config.cassette_library_dir = "test/vcr_cassettes"
   config.hook_into :webmock

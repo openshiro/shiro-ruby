@@ -1,9 +1,10 @@
 require "net/http"
 require "json"
 require "uri"
+require "shiro/version"
 require "shiro/client"
 require "shiro/deployment"
-require "shiro/version"
+require "shiro/prompt"
 
 module Shiro
   @config = {api_key: nil}

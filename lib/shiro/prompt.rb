@@ -1,11 +1,11 @@
 module Shiro
-  class Deployment
+  class Prompt
     def self.list
-      client.get("/deployments").parsed_response
+      client.get("/prompts").parsed_response
     end
 
     def self.retrieve(id)
-      client.get("/deployments/#{id}").parsed_response
+      client.get("/prompts/#{id}").parsed_response
     end
 
     private

@@ -2,12 +2,6 @@ require "test_helper"
 require "shiro"
 
 class DeploymentTest < Minitest::Test
-  def setup
-    Shiro.configure do |config|
-      config[:api_key] = ENV["SHIRO_API_KEY"]
-    end
-  end
-
   def test_list_deployments
     VCR.use_cassette("deployments_list") do
       response = Shiro::Deployment.list
