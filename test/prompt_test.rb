@@ -13,10 +13,9 @@ class PromptTest < Minitest::Test
 
   def test_retrieve_prompt
     VCR.use_cassette("prompt_retrieve") do
-      prompt_id = Shiro::Prompt.list.first["id"]
-      response = Shiro::Prompt.retrieve(prompt_id)
+      response = Shiro::Prompt.retrieve(ENV['SHIRO_PROMT_ID'])
 
-      assert_equal prompt_id, response["id"]
+      assert_equal ENV['SHIRO_PROMT_ID'], response["id"]
       assert response.key?("name"), "Expected prompt to have a 'name'"
       assert response.key?("body"), "Expected prompt to have a 'body'"
       # Add more assertions based on the expected structure of a prompt

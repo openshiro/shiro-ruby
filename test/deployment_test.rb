@@ -13,10 +13,9 @@ class DeploymentTest < Minitest::Test
 
   def test_retrieve_deployment
     VCR.use_cassette("deployment_retrieve") do
-      deployment_id = Shiro::Deployment.list.first["id"]
-      response = Shiro::Deployment.retrieve(deployment_id)
+      response = Shiro::Deployment.retrieve(ENV['SHIRO_DEPLOYMENT_ID'])
 
-      assert_equal deployment_id, response["id"]
+      assert_equal ENV['SHIRO_DEPLOYMENT_ID'], response["id"]
       assert response.key?("name")
       assert response.key?("environment_type")
     end
