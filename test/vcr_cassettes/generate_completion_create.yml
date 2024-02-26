@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://openshiro.com/api/v1/generate_completion
+    body:
+      encoding: UTF-8
+      string: '{"deployment_id":"dpmt_o6drBgMEZv9YmU9vYjb5QwxR","environment":"PRODUCTION","prompt_id":"prmt_6q9JKvEmp5LPxub5ONgawnrB","input_variables":{"review_text":"I
+        loved the movie."}}'
+    headers:
+      Authorization:
+      - Bearer <SHIRO_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 26 Feb 2024 05:37:45 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1708925865&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=pPEOjV70jN55MEnMW9MI3mYW9JEVXW4PPBjNURtY%2Bmk%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1708925865&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=pPEOjV70jN55MEnMW9MI3mYW9JEVXW4PPBjNURtY%2Bmk%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fd68791208451c24a3ba8a8d0a590581"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3c8694e5-63f1-4ab8-aa33-5564ec55539b
+      X-Runtime:
+      - '0.391962'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Length:
+      - '22'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"content":"Positive"}'
+  recorded_at: Mon, 26 Feb 2024 05:37:46 GMT
+recorded_with: VCR 6.2.0

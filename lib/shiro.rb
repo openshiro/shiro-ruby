@@ -5,6 +5,7 @@ require "shiro/version"
 require "shiro/client"
 require "shiro/deployment"
 require "shiro/prompt"
+require "shiro/generate_completion"
 
 module Shiro
   @config = {api_key: nil}
