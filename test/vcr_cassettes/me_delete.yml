@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://openshiro.com/api/v1/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <SHIRO_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"44136fa355b3678a1146ad16f7e8649e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 86f451d4-9e9c-453f-8647-26a586cf2b65
+      X-Runtime:
+      - '0.347555'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=137.93,
+        instantiation.active_record;dur=25.10, transaction.active_record;dur=296.68,
+        broadcast.action_cable;dur=3.67, process_action.action_controller;dur=333.74
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "{}"
+  recorded_at: Mon, 26 Feb 2024 06:16:40 GMT
+recorded_with: VCR 6.2.0

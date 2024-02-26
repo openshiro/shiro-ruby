@@ -18,6 +18,10 @@ module Shiro
       self.class.post(path, body: body.to_json, headers: auth_header.merge("Content-Type" => "application/json"))
     end
 
+    def delete(path)
+      self.class.delete(path, headers: auth_header)
+    end
+
     private
 
     def auth_header
