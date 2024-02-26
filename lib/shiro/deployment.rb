@@ -8,6 +8,10 @@ module Shiro
       client.get("/deployments/#{id}").parsed_response
     end
 
+    def self.update(id, attributes)
+      client.patch("/deployments/#{id}", attributes).parsed_response
+    end
+
     private
 
     def self.client

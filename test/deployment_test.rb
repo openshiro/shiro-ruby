@@ -20,4 +20,14 @@ class DeploymentTest < Minitest::Test
       assert response.key?("environment_type")
     end
   end
+
+  def test_update_deployment_name
+    VCR.use_cassette("deployment_update") do
+      new_name = "Updated Deployment Name"
+
+      response = Shiro::Deployment.update(ENV['SHIRO_DEPLOYMENT_ID'], {name: new_name})
+
+      assert_equal new_name, response["name"], "Expected the deployment's name to be updated"
+    end
+  end
 end
