@@ -1,6 +1,6 @@
 # Shiro Ruby Library
 
-This is the official [Shiro API](https://openshiro.com/api/v1/docs) Ruby gem maintained by [OpenShiro](https://openshiro.com).
+This is the official [Shiro API](https://openshiro.com/api/v1/docs) Ruby library gem maintained by [OpenShiro](https://openshiro.com). The Shiro Ruby library provides convenient access to the Stripe API from applications written in the Ruby language.
 
 ## Documentation
 
@@ -22,7 +22,7 @@ or directly in the gemfile:
 
 ## Usage
 
-First, configure Shiro with your API key:
+The library needs to be configured with your account's api key which is available in your Shiro account under API Keys.
 
 ```ruby
 require "shiro"
@@ -46,7 +46,7 @@ deployments = Shiro::Deployment.list
 deployment = Shiro::Deployment.retrieve("dpmt_lWokJnPAwQCeV2ZWovjG7BNr")
 ```
 
-**Update a deployment name**
+**Update a deployment**
 
 ```ruby
 updated_deployment = Shiro::Deployment.update("dpmt_lWokJnPAwQCeV2ZWovjG7BNr", { name: "New Deployment Name" })
@@ -92,6 +92,10 @@ prompts = Shiro::Prompt.list
 ```ruby
 prompt = Shiro::Prompt.retrieve("prmt_WnAlbE5lEMtxAG2Qly6jo2dV")
 ```
+
+## Support
+
+New features and bug fixes are released on the latest major version of the Shiro Python library. If you are on an older major version, we recommend that you upgrade to the latest in order to use the new features and bug fixes including those for security vulnerabilities. Older major versions of the package will continue to be available for use, but will not be receiving any updates.
 
 ## Development
 
