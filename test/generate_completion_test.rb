@@ -6,7 +6,7 @@ class GenerateCompletionTest < Minitest::Test
     VCR.use_cassette("generate_completion_create") do
       options = {
         environment: "PRODUCTION",
-        prompt_id: ENV['SHIRO_PROMT_ID'],
+        prompt_id: ENV['SHIRO_PROMPT_ID'],
         input_variables: { "review_text": "I loved the movie." }
       }
 
