@@ -93,3 +93,10 @@ prompts = Shiro::Prompt.list
 prompt = Shiro::Prompt.retrieve("prmt_WnAlbE5lEMtxAG2Qly6jo2dV")
 ```
 
+## Development
+
+Run the tests:
+
+```
+rake test
+```
