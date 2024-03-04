@@ -10,7 +10,7 @@ See the [API docs](https://openshiro.com/api/v1/docs) and also this post on [Get
 
 To install the gem:
 
-`gem install stripe`
+`gem install shiro`
 
 Include it in your Rails gemfile with:
 
