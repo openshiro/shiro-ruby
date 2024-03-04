@@ -10,15 +10,21 @@ See the [API docs](https://openshiro.com/api/v1/docs) and also this post on [Get
 
 To install the gem:
 
-`gem install shiro`
+```
+gem install shiro
+```
 
 Include it in your Rails gemfile with:
 
-`bundle add shiro`
+```
+bundle add shiro
+```
 
 or directly in the gemfile:
 
-`gem "shiro", "~> 0.1.1"`
+```
+gem "shiro", "~> 0.1.1"
+```
 
 ## Usage
 
@@ -76,7 +82,6 @@ current_user = Shiro::Me.retrieve
 
 ```ruby
 response = Shiro::Me.destroy
-puts response # The response might be empty if the account is successfully deleted.
 ```
 
 ### Prompt Actions
